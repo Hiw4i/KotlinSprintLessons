@@ -6,8 +6,10 @@ fun main() {
 
     val buff: Byte = 20
 
-    val buffCrystalOre = (crystalOre * buff) / 100
-    val buffIronOre = (ironOre * buff) / 100
+    val percentDivider = 100
+
+    val buffCrystalOre = (crystalOre * buff) / percentDivider
+    val buffIronOre = (ironOre * buff) / percentDivider
 
     println("Buff crystal ore: $buffCrystalOre")
     println("Buff iron ore: $buffIronOre")
