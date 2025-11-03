@@ -6,9 +6,9 @@ fun main() {
     val grade3 = 3
     val grade4 = 5
 
-    val numberOfGrades = 4.0
+    val numberOfStudents = 4
 
-    val averageGrade = (grade1 + grade2 + grade3 + grade4) / numberOfGrades
+    val averageGrade = (grade1 + grade2 + grade3 + grade4).toFloat() / numberOfStudents
 
     println(averageGrade)
 }
