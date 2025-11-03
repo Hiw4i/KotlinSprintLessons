@@ -6,13 +6,14 @@ fun main() {
 
     val travelMinutes: Short = 457
 
-    val totalMinutes: Int = departureHour * 60 + departureMinute + travelMinutes
+    val hoursInMinutes = 60
+    val minutesInHours = 60
 
-    val arrivalHour: Int = totalMinutes / 60
-    val arrivalMinute: Int = totalMinutes % 60
+    val totalMinutes: Int = departureHour * hoursInMinutes + departureMinute + travelMinutes
 
-    print(if (arrivalHour < 10) "0$arrivalHour" else "$arrivalHour")
-    print(':')
-    print(if (arrivalMinute < 10) "0$arrivalMinute" else "$arrivalMinute")
+    val arrivalHour: Int = totalMinutes / minutesInHours
+    val arrivalMinute: Int = totalMinutes % minutesInHours
+
+    println(String.format("%02d:%02d", arrivalHour, arrivalMinute))
 
 }
