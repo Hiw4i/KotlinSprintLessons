@@ -2,15 +2,15 @@ package org.example.lesson_2
 
 import kotlin.math.pow
 
+const val PERCENT_DIVIDER = 100
+const val ONE = 1
+
 fun main() {
     val summa: Double =  70000.0
     val annualRate: Double = 16.7
     val years: Double = 20.0
 
-    val percentDivider = 100
-    val one = 1
+    val finalSumma: Double = summa * (ONE + annualRate / PERCENT_DIVIDER).pow(years)
 
-    val finalSumma: Double = summa * (one + annualRate / percentDivider).pow(years)
-
-    println(String.format("%.3f", finalSumma))
+    println("%.3f".format(finalSumma))
 }
