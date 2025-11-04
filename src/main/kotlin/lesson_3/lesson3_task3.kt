@@ -1,7 +1,7 @@
 package org.example.lesson_3
 
 fun main() {
-    val number: Byte = 7
+    val number = 7
 
     println("""
         $number * 1 = ${number * 1}
