@@ -14,6 +14,6 @@ fun main() {
     val arrivalHour: Int = totalMinutes / MINUTES_IN_HOURS
     val arrivalMinute: Int = totalMinutes % MINUTES_IN_HOURS
 
-    println(String.format("%02d:%02d", arrivalHour, arrivalMinute))
+    println("%02d:%02d".format(arrivalHour, arrivalMinute))
 
 }
