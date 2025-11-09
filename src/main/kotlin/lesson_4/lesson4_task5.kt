@@ -1,8 +1,12 @@
 package org.example.lesson_4
 
-
-
 fun main() {
+
+    val minCrew = 55
+    val maxCrew = 70
+    val goodCrew = 70
+    val minSupplies = 50
+
     print("Есть ли повреждения корпуса (true/false)? ")
     val hasDamage = readln().toBoolean()
 
@@ -15,7 +19,7 @@ fun main() {
     print("Благоприятная погода (true/false)? ")
     val goodWeather = readln().toBoolean()
 
-    val canSwim = (!hasDamage && crew in 55..70 && supplies > 50) || (hasDamage && crew == 70 && supplies >= 50 && goodWeather)
+    val canSwim = (!hasDamage && crew in minCrew..maxCrew && supplies > minSupplies) || (hasDamage && crew == goodCrew && supplies >= minSupplies && goodWeather)
 
     println("Корабль может отправится в плавание: $canSwim")
 
