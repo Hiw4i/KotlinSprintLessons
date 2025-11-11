@@ -19,7 +19,7 @@ fun main() {
     } else {
         println("[вздыхает...] Ах да, пароль... Как будто это что-то изменит...")
         print("Введите ваш пароль: ")
-        var yourUserPassword = readln()
+        val yourUserPassword = readln()
 
         if (yourUserPassword == registeredPassword) {
             println(
