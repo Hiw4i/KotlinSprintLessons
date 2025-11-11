@@ -6,7 +6,7 @@ fun main() {
     print("Введите расстояние поездки в км: ")
     val distance = readln().toDouble()
 
-    print("Введите расход топлива на 100 км: ")
+    print("Введите расход топлива на 100км: ")
     val fuelConsumption = readln().toDouble()
 
     print("Введите цену за литр топлива: ")
