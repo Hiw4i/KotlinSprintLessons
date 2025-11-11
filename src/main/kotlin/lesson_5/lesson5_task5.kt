@@ -1,9 +1,7 @@
 package org.example.lesson_5
 
-
-
 fun main() {
-    val winningNumbers = List(3) { (0..42).random() }
+    val winningNumbers = (0..42).shuffled().take(3)
 
     println("Вам необходимо ввести 3 числа.")
     val userNumbers = List(3) {
