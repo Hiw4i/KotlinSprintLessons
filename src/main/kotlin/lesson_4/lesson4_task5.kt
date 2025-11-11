@@ -19,7 +19,8 @@ fun main() {
     print("Благоприятная погода (true/false)? ")
     val goodWeather = readln().toBoolean()
 
-    val canSwim = (!hasDamage && crew in minCrew..maxCrew && supplies > minSupplies) || (hasDamage && crew == goodCrew && supplies >= minSupplies && goodWeather)
+    val canSwim = ((hasDamage == false) && (crew in minCrew..maxCrew) && (supplies > minSupplies))
+            || ((hasDamage == true) && (crew == goodCrew) && (supplies >= minSupplies) && (goodWeather == true))
 
     println("Корабль может отправится в плавание: $canSwim")
 
