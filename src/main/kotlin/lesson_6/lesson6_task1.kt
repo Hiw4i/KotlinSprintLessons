@@ -3,27 +3,29 @@ package org.example.lesson_6
 fun main() {
     println("РЕГИСТРАЦИЯ")
     print("Введите логин: ")
-    val login = readLine()!!
+    val login = readln()
 
     print("Введите пароль: ")
-    val password = readLine()!!
+    val password = readln()
 
     println("Вы зарегистрированы\n")
 
-    var check_login: String
-    var check_password: String
+    var checkLogin: String
+    var checkPassword: String
+    var isCorrect: Boolean
 
     do {
         print("Введите логин для входа: ")
-        check_login = readLine()!!
+        checkLogin = readln()
 
         print("Введите пароль для входа: ")
-        check_password = readLine()!!
+        checkPassword = readln()
 
-        if (check_login != login || check_password != password) {
+        isCorrect = checkLogin == login && checkPassword == password
+        if (!isCorrect) {
             println("Логин или пароль неверны. Попробуйте снова.\n")
         }
-    } while (check_login != login || check_password != password)
+    } while (!isCorrect)
 
     println("Вы успешно вошли")
 }
