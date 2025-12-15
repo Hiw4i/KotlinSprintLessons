@@ -1,6 +1,6 @@
 package org.example.lesson_6
 
-const val MILLISECOND_SECOND = 1000L
+//const val MILLISECOND_SECOND = 1000L
 fun main() {
     println("Введите количество секунд для таймера: ")
     val seconds = readln().toInt()
