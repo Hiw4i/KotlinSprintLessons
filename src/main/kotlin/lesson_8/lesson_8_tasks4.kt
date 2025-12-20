@@ -4,24 +4,24 @@ fun main() {
     val listOfIngredients = arrayOf("flour", "butter", "sugar", "salt")
 
     println("Ingredient list:")
-    for (i in listOfIngredients.indices) {
-        println("${i + 1}: ${listOfIngredients[i]}")
+    for (ingredient in listOfIngredients) {
+        println("${listOfIngredients.indexOf(ingredient) + 1}: $ingredient")
     }
 
-    print("Which ingredient number do you want to replace? ")
-    var ingredientNumber = readln().toInt()
+    print("Which ingredient do you want to replace? ")
+    var ingredientToReplace = readln()
 
-    while (ingredientNumber < 1 || ingredientNumber > listOfIngredients.size) {
-        println("Oops! There is no ingredient with that number. Try again:")
-        ingredientNumber = readln().toInt()
+    while (listOfIngredients.indexOf(ingredientToReplace) == -1) {
+        println("Oops! There is no such ingredient. Try again:")
+        ingredientToReplace = readln()
     }
 
-    print("What do you want to replace '${listOfIngredients[ingredientNumber - 1]}' with? ")
+    print("What do you want to replace \"$ingredientToReplace\" with? ")
     val newIngredient = readln()
-    listOfIngredients[ingredientNumber - 1] = newIngredient
+    listOfIngredients[listOfIngredients.indexOf(ingredientToReplace)] = newIngredient
 
     println("Wow! Your updated ingredient list is ready:")
-    for (i in listOfIngredients.indices) {
-        println("${i + 1}: ${listOfIngredients[i]}")
+    for (ingredient in listOfIngredients) {
+        println("${listOfIngredients.indexOf(ingredient) + 1}: $ingredient")
     }
 }
