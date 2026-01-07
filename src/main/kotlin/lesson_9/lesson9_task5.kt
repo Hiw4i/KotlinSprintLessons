@@ -32,6 +32,5 @@ fun main() {
         }
     }
 
-
     println(resultListOfIngredients.joinToString(", "))
 }
