@@ -16,7 +16,7 @@ fun main() {
     println(message)
 }
 
-fun numberGenerator(): Int {
+private fun numberGenerator(): Int {
     val number = 1..6
     return number.random()
 }
