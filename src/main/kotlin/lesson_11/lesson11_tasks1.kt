@@ -1,6 +1,6 @@
 package org.example.lesson_11
 
-class User (
+private class User (
     val id: Int,
     val login: String,
     val password: String,
