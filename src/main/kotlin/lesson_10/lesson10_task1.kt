@@ -1,10 +1,10 @@
 package org.example.lesson_10
 
 fun main() {
-    val humanResult = numberGenerator()
+    val humanResult = generateNumber()
     println("Human rolled the dice and $humanResult fell out.")
 
-    val botResult = numberGenerator()
+    val botResult = generateNumber()
     println("Bot rolled the dice and $botResult fell out.")
 
     val message = when {
@@ -16,7 +16,7 @@ fun main() {
     println(message)
 }
 
-private fun numberGenerator(): Int {
+private fun generateNumber(): Int {
     val number = 1..6
     return number.random()
 }
