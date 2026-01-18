@@ -20,8 +20,8 @@ private class Forum {
         lastFreeMemberId++
 
         val newMember = MemberOfForum(memberId = lastFreeMemberId, memberName = memberName)
-
         listOfMembers.add(newMember)
+
         return newMember
     }
 
@@ -59,7 +59,6 @@ fun main() {
 
     forum.createNewMessage(memberId = member1.memberId, message = "Hi, I bought some coffins, do you want one?")
     forum.createNewMessage(memberId = member1.memberId, message = "They are very comfortable!")
-
     forum.createNewMessage(memberId = member2.memberId, message = "Oh, yes, with pleasure!")
     forum.createNewMessage(memberId = member2.memberId, message = "Do you have any in black?")
 
