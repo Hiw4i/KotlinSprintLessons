@@ -1,6 +1,6 @@
 package org.example.lesson_11
 
-private class User (
+private class User(
     val id: Int,
     val login: String,
     val password: String,
@@ -10,7 +10,7 @@ private class User (
 fun main() {
     val user1 = User(
         id = 1,
-        login = "123" ,
+        login = "123",
         password = "ghf123",
         mail = "cat@gmail.com"
     )
