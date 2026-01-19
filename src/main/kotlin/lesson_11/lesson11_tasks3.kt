@@ -1,65 +1,65 @@
 package org.example.lesson_11
 
 
-private class Room (
+class Room (
     val coverImage: String,
     val title: String,
-    val listOfUsers: MutableList<User>,
+    val participants: MutableList<User> = mutableListOf(),
 ) {
     fun addUser(user: User) {
-       listOfUsers.add(user)
+        participants.add(user)
     }
 
     fun updateStatus(userName: String, newStatus: String) {
-        for (user in listOfUsers) {
-            if (user.name == userName) {
-                user.status = newStatus
-            }
-        }
+        participants.find { user ->
+            user.nickName == userName
+        }?.status = newStatus
     }
 
-    fun printRoomInfo() {
+        fun printRoomInfo() {
         println("Cover: $coverImage")
         println("Title: $title")
         println()
 
-        for (user in listOfUsers) {
+        for (user in participants) {
             println("Avatar: ${user.avatar}")
-            println("Name: ${user.name}")
+            println("Name: ${user.nickName}")
             println("Status: ${user.status}")
             println()
         }
     }
 }
 
-private class User (
+class User (
     val avatar: String,
-    val name: String,
+    val nickName: String,
     var status: String,
 )
 
 fun main() {
     val user1 = User(
         avatar = "avatar1.png",
-        name = "Qu",
+        nickName = "Qu",
         status = "muted",
     )
     val user2 = User(
         avatar = "avatar1.png",
-        name = "Maksim",
+        nickName = "Maksim",
         status = "speaking",
     )
     val user3 = User(
         avatar = "avatar1.png",
-        name = "God",
+        nickName = "God",
         status = "mic off",
     )
 
     val room = Room(
         coverImage = "cover_image.png",
         title = "Search for friends",
-        listOfUsers = mutableListOf(user1, user2)
     )
+
+    room.addUser(user1)
+    room.addUser(user2)
 
     room.printRoomInfo()
 
