@@ -5,7 +5,7 @@ class WeatherInfo {
     var nightTemp = 10
     var isPrecipitation = false
 
-    fun  printInfo() {
+    fun printInfo() {
         println("Day temperature: $dayTemp °C.")
         println("Night temperature: $nightTemp °C.")
         println("Precipitation: $isPrecipitation.")
