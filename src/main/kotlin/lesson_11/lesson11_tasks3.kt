@@ -1,7 +1,7 @@
 package org.example.lesson_11
 
 
-class Room (
+class Room(
     val coverImage: String,
     val title: String,
     val participants: MutableList<User> = mutableListOf(),
@@ -16,7 +16,7 @@ class Room (
         }?.status = newStatus
     }
 
-        fun printRoomInfo() {
+    fun printRoomInfo() {
         println("Cover: $coverImage")
         println("Title: $title")
         println()
@@ -30,7 +30,7 @@ class Room (
     }
 }
 
-class User (
+class User(
     val avatar: String,
     val nickName: String,
     var status: String,
