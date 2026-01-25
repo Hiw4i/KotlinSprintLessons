@@ -6,7 +6,4 @@ class PhoneContact(
     val company: String?,
 )
 
-fun main() {
-    val human = PhoneContact("Kiwi", 65173482701, null)
-    println(human.company)
-}
+fun main() {}
