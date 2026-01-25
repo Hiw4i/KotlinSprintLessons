@@ -4,9 +4,9 @@ package org.example.lesson_11
 class Room(
     val coverImage: String,
     val title: String,
-    val participants: MutableList<User> = mutableListOf(),
+    val participants: MutableList<RoomUser> = mutableListOf(),
 ) {
-    fun addUser(user: User) {
+    fun addUser(user: RoomUser) {
         participants.add(user)
     }
 
@@ -30,24 +30,24 @@ class Room(
     }
 }
 
-class User(
+class RoomUser(
     val avatar: String,
     val nickName: String,
     var status: String,
 )
 
 fun main() {
-    val user1 = User(
+    val user1 = RoomUser(
         avatar = "avatar1.png",
         nickName = "Qu",
         status = "muted",
     )
-    val user2 = User(
+    val user2 = RoomUser(
         avatar = "avatar1.png",
         nickName = "Maksim",
         status = "speaking",
     )
-    val user3 = User(
+    val user3 = RoomUser(
         avatar = "avatar1.png",
         nickName = "God",
         status = "mic off",
