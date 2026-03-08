@@ -18,7 +18,7 @@ class Planet(
 ) : CelestialBody(name, hasAtmosphere, isSuitableForLanding) {
 
     override fun printInfo() {
-        super.printInfo()
+        super.printInfo()   // Пишет инфу из главного класса CelestialBody
 
         println("Satellites:")
         if (satellites.isEmpty()) {
