@@ -31,7 +31,6 @@ fun main() {
 
     val offensiveContent = "Hey losers! You all suck!"
     toxicUser.writeMessage(offensiveContent)
-    toxicUser.writeMessage("Hey losers! You all suck!")
 
     admin.readMessage()
     admin.writeMessage("Dear ${toxicUser.name}, please follow our community guidelines :)")
