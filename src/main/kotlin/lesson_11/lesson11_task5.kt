@@ -12,8 +12,9 @@ private class MessageOfForum(
 )
 
 private class Forum {
-    val listOfMembers = mutableListOf<MemberOfForum>()
-    val listOfMessages = mutableListOf<MessageOfForum>()
+    // Database of members and messages
+    private val listOfMembers = mutableListOf<MemberOfForum>()
+    private val listOfMessages = mutableListOf<MessageOfForum>()
     var lastFreeMemberId = 0
 
     fun createNewMember(memberName: String): MemberOfForum {
@@ -26,6 +27,7 @@ private class Forum {
     }
 
     fun createNewMessage(memberId: Int, message: String) {
+        // Looking for a member in our list by ID
         val foundMember = listOfMembers.find { memberOfForum ->
             memberOfForum.memberId == memberId
         }
@@ -41,12 +43,14 @@ private class Forum {
     fun printThread() {
         listOfMessages.forEach { messageOfForum ->
 
+            // 1. Find the member who wrote this specific message
             val memberName = listOfMembers.find { memberOfForum ->
                 memberOfForum.memberId == messageOfForum.memberId
-            }?.memberName
-            val message = messageOfForum.message
+            // 2. ?.memberName -> if member was found, get their name
+            // 3. ?: "Unknown" -> if NOT found (null), use "Unknown" as a default name
+            }?.memberName ?: "Unknown"
 
-            println("$memberName: $message")
+            println("$memberName: $messageOfForum.message")
         }
     }
 }
