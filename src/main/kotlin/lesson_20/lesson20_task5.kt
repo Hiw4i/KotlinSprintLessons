@@ -1,8 +1,6 @@
 package org.example.lesson_20
 
-class Robot(
-
-) {
+class Robot {
 
     val phrases: MutableList<String> = mutableListOf(
         "Greetings, Earthling.",
